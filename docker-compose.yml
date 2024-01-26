@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  rent-service:
+    image: postgres
+    container_name: rent-postgres
+    environment:
+      POSTGRES_DB: rent-db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    restart: always
+    ports:
+      - '5440:5432'
